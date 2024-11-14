@@ -1,9 +1,15 @@
+import PostsComponent from '@/app/components/posts/PostsComponent';
+import { getPosts } from '@/app/services/api.service';
 import React from 'react';
 
-const PostsPage = () => {
+const PostsPage = async () => {
+    const posts = await getPosts();
+
     return (
         <div>
-            PostsPage
+            {
+                <PostsComponent posts={posts}/>
+            }
         </div>
     );
 };

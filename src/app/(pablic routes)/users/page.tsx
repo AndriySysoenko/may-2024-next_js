@@ -5,7 +5,6 @@ import {getUsers} from "@/app/services/api.service";
 
 const UsersPage = async () => {
     const users = await getUsers();
-    console.log(users)
 
     return (
         <div>
